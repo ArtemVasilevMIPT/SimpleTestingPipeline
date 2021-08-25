@@ -39,3 +39,5 @@ cmake -DCMAKE_BUILD_TYPE=Debug ..
 make -j7
 
 make coverage_report -j7
+cd ../bin
+./test-test
