@@ -45,7 +45,7 @@ function(run_coverage test_sources sources coverage_target target_name coverage_
 
 
     target_link_libraries(
-		${test_name} gtest_main gtest gmock Threads::Threads gcovr
+		${test_name} gtest_main gtest gmock Threads::Threads #gcovr
 	)
 
     setup_target_for_coverage_gcovr_html(
