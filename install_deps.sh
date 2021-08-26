@@ -2,9 +2,17 @@ python_exe=$1
 
 echo "Running dependencies installer"
 
+check_cmake=$(cmake --version)
+error_code=$?
+if [ $error_code -ne 0 ]
+then
+    echo "While installing cmake error happened: " $error_code
+    echo "Please, install cmake by running: sudo apt-get install cmake"
+    exit $error_code
+fi
+
 check_pip=$(${python_exe} -m pip)
 error_code=$?
-
 if [ $error_code -ne 0 ]
 then
     echo "Installing pip"
