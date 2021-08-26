@@ -32,6 +32,7 @@ printf "int main(){\n" >> src/source.cpp
 printf "return 0;}\n" >> src/source.cpp
 
 #Building and running project
+rm -r -f cmake
 mkdir cmake
 cd cmake
 
